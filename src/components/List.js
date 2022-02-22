@@ -2,11 +2,14 @@ import React, {Fragment, useState} from "react";
 
 const List = () => {
 
-    const [arrayNumber, setNumber] = useState([1,2,3,4,5])
+    const [arrayNumber, setArrayNumber] = useState([1,2,3,4,5])
+ 
+    const[number, setNumber] = useState(5)
 
     const addElement = () => {
+        setNumber(number + 1)
         console.log('Hubo click')
-        setNumber([...arrayNumber, 6])
+        setArrayNumber([...arrayNumber, number])
     }
 
         return (
